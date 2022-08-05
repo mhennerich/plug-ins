@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2012, 2017 Liviu Ionescu.
+  This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License 2.0
+  which accompanies this distribution, and is available at
+  https://www.eclipse.org/legal/epl-2.0/
+  
+  SPDX-License-Identifier: EPL-2.0
+
+  Contributors:
+    Liviu Ionescu
+-->
+
+<plugin>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="org.eclipse.cdt.ui.preferences.CPluginPreferencePage"
+			id="org.eclipse.embedcdt.packs.ui.preferencePage.packages"
+			class="org.eclipse.embedcdt.packs.ui.preferences.FolderPage"
+			name="%preferences.packages">
+		</page>
+		<page
+			category="org.eclipse.embedcdt.packs.ui.preferencePage.packages"
+			class="org.eclipse.embedcdt.packs.ui.preferences.ReposPage"
+			id="org.eclipse.embedcdt.packs.ui.preferences.SitesPage"
+			name="%preferences.sites">
+		</page>
+	</extension>
+	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.eclipse.embedcdt.packs.ui.preferences.SitesInitializer">
+		</initializer>
+	</extension>
+	<extension point="org.eclipse.ui.perspectives">
+		<perspective
+			class="org.eclipse.embedcdt.internal.packs.ui.perspectives.PacksPerspective"
+			icon="icons/packages.png"
+			id="org.eclipse.embedcdt.internal.packs.ui.perspectives.PacksPerspective"
+			name="%perspectives.packs">
+		</perspective>
+	</extension>
+	<extension point="org.eclipse.ui.views">
+		<category
+			id="org.eclipse.embedcdt.packs.ui"
+			name="%views.packs.category">
+		</category>
+		<view
+			allowMultiple="false"
+			category="org.eclipse.embedcdt.packs.ui"
+			class="org.eclipse.embedcdt.internal.packs.ui.views.DevicesView"
+			icon="icons/hardware_chip.png"
+			id="org.eclipse.embedcdt.internal.packs.ui.views.DevicesView"
+			name="%views.packs.devices">
+		</view>
+		<view
+			allowMultiple="false"
+			category="org.eclipse.embedcdt.packs.ui"
+			class="org.eclipse.embedcdt.internal.packs.ui.views.BoardsView"
+			icon="icons/board.png"
+			id="org.eclipse.embedcdt.internal.packs.ui.views.BoardsView"
+			name="%viwes.packs.boards">
+		</view>
+		<view
+			allowMultiple="false"
+			category="org.eclipse.embedcdt.packs.ui"
+			class="org.eclipse.embedcdt.internal.packs.ui.views.KeywordsView"
+			icon="icons/info_obj.png"
+			id="org.eclipse.embedcdt.internal.packs.ui.views.KeywordsView"
+			name="%viwes.packs.keywords">
+		</view>
+		<view
+			allowMultiple="false"
+			category="org.eclipse.embedcdt.packs.ui"
+			class="org.eclipse.embedcdt.internal.packs.ui.views.PacksView"
+			icon="icons/packages.png"
+			id="org.eclipse.embedcdt.internal.packs.ui.views.PacksView"
+			name="%viwes.packs.packages">
+		</view>
+		<view
+			allowMultiple="false"
+			category="org.eclipse.embedcdt.packs.ui"
+			class="org.eclipse.embedcdt.internal.packs.ui.views.OutlineView"
+			icon="icons/outline_co.png"
+			id="org.eclipse.embedcdt.internal.packs.ui.views.OutlineView"
+			name="%viwes.packs.outline"
+			restorable="true">
+		</view>
+	</extension>
+	<extension point="org.eclipse.ui.commands">
+		<category
+			id="org.eclipse.embedcdt.packs.ui.commands.category"
+			name="%commands.packs.category">
+		</category>
+		<command
+			categoryId="org.eclipse.embedcdt.packs.ui.commands.category"
+			id="org.eclipse.embedcdt.packs.ui.commands.updateCommand"
+			name="%commands.packs.refresh">
+		</command>
+		<command
+			categoryId="org.eclipse.embedcdt.packs.ui.commands.category"
+			id="org.eclipse.embedcdt.packs.ui.commands.showPerspectiveCommand"
+			name="%commands.packs.showPerspective">
+		</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			allPopups="false"
+			locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+			<toolbar
+         id="org.eclipse.embedcdt.packs.toolbar.main.showPerspective"
+         label="%menus.toolbar.showPerspective.toolbar.label">
+				<command
+          commandId="org.eclipse.embedcdt.packs.ui.commands.showPerspectiveCommand"
+          icon="icons/packages.png"
+          label="%menus.toolbar.showPerspective.command.label"
+          style="push"
+          tooltip="%menus.toolbar.showPerspective.command.tooltip">
+       <visibleWhen
+             checkEnabled="false">
+<iterate ifEmpty="false">
+          <adapt
+                type="org.eclipse.core.resources.IResource">
+             <test
+                   forcePluginActivation="true"
+                   property="org.eclipse.core.resources.projectNature"
+                   value="org.eclipse.cdt.core.cnature">
+             </test>
+          </adapt>
+</iterate>
+       </visibleWhen>
+				</command>
+			</toolbar>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+		<handler
+			class="org.eclipse.embedcdt.packs.ui.handlers.UpdatePacksHandler"
+			commandId="org.eclipse.embedcdt.packs.ui.commands.updateCommand">
+		</handler>
+		<handler
+			class="org.eclipse.embedcdt.packs.ui.handlers.ShowPerspectiveHandler"
+			commandId="org.eclipse.embedcdt.packs.ui.commands.showPerspectiveCommand">
+		</handler>
+	</extension>
+
+</plugin>

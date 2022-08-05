@@ -1,4 +1,6 @@
 target/
 bin/
-.settings/
 content.xml
+vscode.mac.command
+.metadata
+

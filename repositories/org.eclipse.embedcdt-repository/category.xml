@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2012, 2020 Liviu Ionescu.
+  This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License 2.0
+  which accompanies this distribution, and is available at
+  https://www.eclipse.org/legal/epl-2.0/
+
+  SPDX-License-Identifier: EPL-2.0
+
+  Contributors:
+    Liviu Ionescu
+    Alexander Fedorov
+-->
+
+<site>
+   <category-def name="org.eclipse.embedcdt.category" label="Embedded C/C++ Cross Development Tools"/>
+   <feature id="org.eclipse.embedcdt">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.managedbuild.cross.arm">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.managedbuild.cross.riscv">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.stm">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.freescale">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.sifive">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.jlink">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.openocd">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.pyocd">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.cortexm">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.xpack">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.packs">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.doc.user">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.ad">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.codered">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.qemu">
+      <category name="org.eclipse.embedcdt.category"/>
+   </feature>
+   <category-def name="org.eclipse.embedcdt.category.source" label="Embedded C/C++ Cross Development Tools Developer Resources"/>
+   <feature id="org.eclipse.embedcdt.managedbuild.cross.arm.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.managedbuild.cross.riscv.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.stm.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.freescale.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.sifive.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.jlink.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.openocd.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.pyocd.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.cortexm.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.xpack.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.packs.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.doc.user.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.templates.ad.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.codered.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+   <feature id="org.eclipse.embedcdt.debug.gdbjtag.qemu.source">
+      <category name="org.eclipse.embedcdt.category.source"/>
+   </feature>
+</site>
